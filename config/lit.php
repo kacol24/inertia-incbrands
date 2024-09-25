@@ -112,7 +112,7 @@ return [
 
         'locale' => 'en',
 
-        'translatable' => true,
+        'translatable' => false,
 
         /**
          * The languages in which your litstack application should be displayed.

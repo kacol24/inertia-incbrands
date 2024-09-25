@@ -1,0 +1,31 @@
+@import "fonts";
+@import "typography";
+
+body {
+    -webkit-text-stroke: 0.001px transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+.navbar {
+    --bs-border-width: 0;
+    --bs-navbar-color: #8d97ad;
+    --bs-navbar-active-color: #263238;
+    --bs-nav-link-font-size: 14px;
+
+    .nav-item {
+        margin: 0 8px;
+
+        .nav-link {
+            @extend %font-montserrat;
+            --bs-nav-link-padding-y: 12px;
+        }
+    }
+}
+
+.site-footer {
+    @extend %font-montserrat;
+    background-color: #3f4555;
+    color: #fff;
+    font-size: 14px;
+}
