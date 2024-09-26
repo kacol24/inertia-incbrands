@@ -12,7 +12,6 @@
         "bkwld/croppa": "^7.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "litstack/litstack": "^3.8",
         "livewire/livewire": "^3.5"
     },
     "require-dev": {
