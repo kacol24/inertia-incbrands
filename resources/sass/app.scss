@@ -1,7 +1,19 @@
+@import "~rfs/scss";
+
 @import "fonts";
 @import "typography";
 
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+:root {
+    --theme-color-green: #5faa52;
+}
+
 body {
+    @extend %font-montserrat;
+    color: #8d97ad;
     -webkit-text-stroke: 0.001px transparent;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -23,9 +35,68 @@ body {
     }
 }
 
+.navbar-toggler-icon {
+    vertical-align: top;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) rgb(95 170 82 / 25%);
+}
+
 .site-footer {
     @extend %font-montserrat;
     background-color: #3f4555;
     color: #fff;
-    font-size: 14px;
+    @include font-size(14px);
+}
+
+.intro {
+    &__content {
+        max-width: 560px;
+        color: #606060;
+        //@include font-size(30px);
+        @extend %font-gotham-rounded;
+        font-weight: 500;
+    }
+}
+
+.section-title {
+    color: var(--color-section-title, #3e4555);
+    @extend %font-gotham;
+    font-weight: 500;
+    //@include font-size(30px);
+
+    &--sm {
+        //@include font-size(24px);
+    }
+}
+
+dt {
+    color: #8d97ad;
+    @extend %font-gotham-rounded;
+    font-weight: normal;
+}
+
+dd {
+    &, a {
+        @extend %font-gotham-rounded;
+        font-weight: bold;
+        color: #8d97ad;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.form-control {
+    --bs-border-radius: 0;
+    --bs-border-width: 0;
+    --bs-border-color: var(--theme-color-green);
+    border-bottom: 2px solid var(--theme-color-green);
+
+    &:focus {
+        box-shadow: 0 0 0 0.25rem rgb(95 170 82 / 25%);
+    }
 }

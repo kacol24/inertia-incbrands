@@ -1,4 +1,29 @@
 %font-montserrat,
-.font-montserrat {
+.font\:montserrat {
     font-family: 'Montserrat', sans-serif;
+}
+
+%font-gotham-rounded,
+.font\:gotham-rounded {
+    font-family: 'Gotham Rounded', sans-serif;
+}
+
+%font-gotham {
+    font-family: 'Gotham', sans-serif;
+}
+
+.text-color\:green {
+    color: var(--theme-color-green);
+}
+
+.text-color\:orange {
+    color: #ef8a21;
+}
+
+.text-color\:blue {
+    color: #24c0da;
+}
+
+.text-color\:red {
+    color: #e14b37;
 }

@@ -14,11 +14,12 @@
 
     <title>Bootstrap demo</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css,npm/aos@2.3.4/dist/aos.min.css">
     @stack('before_styles')
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @stack('after_styles')
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" async></script>
 </head>
 <body class="d-flex flex-column h-100">
 <div class="flex-shrink-0">
@@ -31,7 +32,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" style="background-image: none;width: 1em;height: 1em;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#5faa52" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -77,7 +80,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="mb-5">
         @yield('content')
     </main>
 </div>
@@ -87,7 +90,7 @@
             <div class="col-md-3 mb-5 mb-md-0 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="https://inc-brands.co/wp-content/uploads/2019/07/indogo-logo-footer-150x100.png"
+                        <img src="{{ asset('images/indogo-logo-footer-150x100.png') }}"
                              alt="logo inc brands" class="img-fluid">
                     </div>
                     We offer premium products for baby, kids, and family
@@ -96,7 +99,7 @@
             <div class="col-md-3 mb-5 mb-md-0 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="https://inc-brands.co/wp-content/uploads/2019/07/babygo-logo-footer-150x100.png"
+                        <img src="{{ asset('images/babygo-logo-footer-150x100.png') }}"
                              alt="logo babygo" class="img-fluid">
                     </div>
                     Making parents life easier with fashionable diaper & cooler bags
@@ -105,13 +108,13 @@
             <div class="col-md-3 mb-5 mb-md-0 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="https://inc-brands.co/wp-content/uploads/2019/07/pureco-logo-footer-150x100.png"
+                        <img src="{{ asset('images/pureco-logo-footer-150x100.png') }}"
                              alt="logo inc brands" class="img-fluid">
                     </div>
                     Plant based home cleaning appliances, choose SAFE choose PURECO
                 </div>
             </div>
-            <div class="col-md-3 mb-5 mb-md-0 col-8">
+            <div class="col-md-3 col-8">
                 <div class="text-center">
                     <div class="mb-1">
                         <img src="{{ asset('images/logo-nuudo.png') }}"
@@ -123,9 +126,8 @@
         </div>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+<script
+    src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js,npm/aos@2.3.4"></script>
 @stack('before_scripts')
 <script src="{{ mix('/js/app.js') }}"></script>
 @stack('after_scripts')
