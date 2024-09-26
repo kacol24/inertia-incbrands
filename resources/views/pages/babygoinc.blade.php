@@ -1,3 +1,10 @@
+<?php
+
+use function Laravel\Folio\name;
+
+name('static.babygo');
+?>
+
 @extends('layouts.master')
 
 @push('after_styles')

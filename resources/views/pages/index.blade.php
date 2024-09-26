@@ -1,3 +1,10 @@
+<?php
+
+use function Laravel\Folio\name;
+
+name('home')
+?>
+
 @extends('layouts.master')
 
 @php
