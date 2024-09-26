@@ -130,10 +130,6 @@
     src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js,npm/aos@2.3.4"></script>
 @stack('before_scripts')
 <script src="{{ mix('/js/app.js') }}"></script>
-<script>
-    var observer = lozad();
-    observer.observe();
-</script>
 @stack('after_scripts')
 </body>
 </html>

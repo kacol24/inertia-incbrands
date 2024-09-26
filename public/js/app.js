@@ -8,6 +8,7 @@
 /***/ (() => {
 
 AOS.init();
+lozad().observe();
 
 /***/ }),
 
