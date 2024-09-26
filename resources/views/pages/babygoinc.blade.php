@@ -263,7 +263,7 @@ $testimonials = Testimonial::where('product', 'babygo')->get();
             </div>
             <div class="row justify-content-around mt-3">
                 <div class="col-md-auto mb-3 mb-md-0">
-                    <a href="" target="_blank" class="px-4 py-2 rounded-pill btn fw-bold font:gotham-rounded fs-5"
+                    <a href="https://babygoinc.com/" target="_blank" class="px-4 py-2 rounded-pill btn fw-bold font:gotham-rounded fs-5"
                        style="--bs-btn-color: #fff;--bs-btn-hover-color: #fff; --bs-btn-bg:var(--brand-color);--bs-btn-hover-border-color:var(--brand-color-light);--bs-btn-hover-bg: var(--brand-color-light)">
                         <div style="width: 1em;" class="d-inline-block me-2">
                             {{-- @formatter:off --}}

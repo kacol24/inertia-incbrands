@@ -40,5 +40,66 @@ class Testimonial extends Model
             'image_path' => 'images/babygo/Photo-12.jpeg',
             'title'      => 'Joanna Alexandra',
         ],
+
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p1.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p2.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p3.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p4.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p5.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p6.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p7.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p8.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p9.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p10.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p11.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'pureco',
+            'image_path' => 'images/pureco/p12.png',
+            'title'      => '',
+        ],
     ];
 }

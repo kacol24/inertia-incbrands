@@ -51,8 +51,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a @class(['nav-link', 'active' => request()->routeIs()])
-                               href="#">
+                            <a @class(['nav-link', 'active' => request()->routeIs('static.pureco')])
+                               href="{{ route('static.pureco') }}">
                                 Pureco
                             </a>
                         </li>
