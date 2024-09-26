@@ -1,3 +1,5 @@
+@extends('layouts.master')
+
 @php
     $banners = [
         'images/banners/Banner-BabyGo-2.jpeg',
@@ -5,8 +7,6 @@
         'images/banners/nuudo-img.jpeg',
     ];
 @endphp
-
-@extends('layouts.master')
 
 @push('before_styles')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">

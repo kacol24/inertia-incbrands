@@ -26,7 +26,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset('images/logo@1x.png') }}" alt="logo Inc Brands" class="img-fluid">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,22 +39,26 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ url('/') }}">
+                            <a @class(['nav-link', 'active' => request()->routeIs('home')])
+                               href="{{ route('home') }}">
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a @class(['nav-link', 'active' => request()->routeIs('static.babygo')])
+                               href="{{ route('static.babygo') }}">
                                 BabyGoinc
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a @class(['nav-link', 'active' => request()->routeIs()])
+                               href="#">
                                 Pureco
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a @class(['nav-link', 'active' => request()->routeIs()])
+                               href="#">
                                 Nuudo
                             </a>
                         </li>
