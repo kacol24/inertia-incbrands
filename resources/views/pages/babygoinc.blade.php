@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Testimonial;
 use function Laravel\Folio\name;
 
 name('static.babygo');
+$testimonials = Testimonial::where('product', 'babygo')->get();
 ?>
 
 @extends('layouts.master')
@@ -198,85 +200,25 @@ name('static.babygo');
                     </div>
                     <div class="mt-3" style="--color-border: #ffa600; --color-text: #fff; --margin-text: -1rem;">
                         <div class="row justify-content-around">
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center flex-column mb-3 mb-md-0" data-aos="fade-down">
-                                    <div class="rounded-5 border"
-                                         style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                        <img src="{{ asset('images/babygo/Photo-7.jpeg') }}" alt=""
-                                             class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                    </div>
-                                    <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                         style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                        Vicky Shu
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center flex-column mb-3 mb-md-0" data-aos="fade-down">
-                                    <div class="rounded-5 border"
-                                         style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                        <img src="{{ asset('images/babygo/Photo-8.jpeg') }}" alt=""
-                                             class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                    </div>
-                                    <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                         style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                        Chef Arnold & Tiffany
+                            @foreach($testimonials as $testimonial)
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
+                                         data-aos="fade-down">
+                                        <div class="rounded-5 border"
+                                             style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
+                                            <img src="{{ asset($testimonial->image_path) }}" alt=""
+                                                 class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
+                                        </div>
+                                        <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
+                                             style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
+                                            {{ $testimonial->title }}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center flex-column mb-3 mb-md-0" data-aos="fade-down">
-                                    <div class="rounded-5 border"
-                                         style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                        <img src="{{ asset('images/babygo/Photo-9.jpeg') }}" alt=""
-                                             class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                    </div>
-                                    <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                         style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                        Karina Salim
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-100 mb-md-5"></div>
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center flex-column mb-3 mb-md-0" data-aos="fade-down">
-                                    <div class="rounded-5 border"
-                                         style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                        <img src="{{ asset('images/babygo/Photo-10.jpeg') }}" alt=""
-                                             class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                    </div>
-                                    <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                         style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                        dr. Reisa Brotoasmoro
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center flex-column mb-3 mb-md-0" data-aos="fade-down">
-                                    <div class="rounded-5 border"
-                                         style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                        <img src="{{ asset('images/babygo/Photo-11.jpeg') }}" alt=""
-                                             class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                    </div>
-                                    <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                         style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                        Alice Norin
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center flex-column mb-3 mb-md-0" data-aos="fade-down">
-                                    <div class="rounded-5 border"
-                                         style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                        <img src="{{ asset('images/babygo/Photo-12.jpeg') }}" alt=""
-                                             class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                    </div>
-                                    <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                         style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                        Joanna Alexandra
-                                    </div>
-                                </div>
-                            </div>
+                                @if($loop->iteration % 3 == 0)
+                                    <div class="w-100 mb-md-5"></div>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
