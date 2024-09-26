@@ -1,14 +1,19 @@
 <?php
 
-use App\Models\Slider;
 use function Laravel\Folio\name;
 
-name('home');
-
-$banners = Slider::get();
+name('home')
 ?>
 
 @extends('layouts.master')
+
+@php
+    $banners = [
+        'images/banners/Banner-BabyGo-2.jpeg',
+        'images/banners/Banner-Pureco.jpeg',
+        'images/banners/nuudo-img.jpeg',
+    ];
+@endphp
 
 @push('before_styles')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
@@ -45,8 +50,8 @@ $banners = Slider::get();
                 @foreach($banners as $banner)
                     <div class="swiper-slide">
                         <img
-                            src="{{ Croppa::url($banner->image_path, width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-                            data-src="{{ asset($banner->image_path) }}" alt="banner {{ $loop->iteration }}"
+                            src="{{ Croppa::url($banner, width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
+                            data-src="{{ asset($banner) }}" alt="banner {{ $loop->iteration }}"
                             class="img-fluid w-100 lozad">
                         <div class="swiper-lazy-preloader"></div>
                     </div>
