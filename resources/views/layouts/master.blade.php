@@ -19,7 +19,7 @@
     @stack('before_styles')
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @stack('after_styles')
-    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
 <div class="flex-shrink-0">
@@ -130,6 +130,10 @@
     src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js,npm/aos@2.3.4"></script>
 @stack('before_scripts')
 <script src="{{ mix('/js/app.js') }}"></script>
+<script>
+    var observer = lozad();
+    observer.observe();
+</script>
 @stack('after_scripts')
 </body>
 </html>

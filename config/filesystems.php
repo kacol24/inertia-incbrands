@@ -57,6 +57,11 @@ return [
             'throw' => false,
         ],
 
+        'assets' => [
+            'driver' => 'local',
+            'root' => public_path('images'),
+            'visibility' => 'public',
+        ],
     ],
 
     /*
