@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.2",
         "bkwld/croppa": "^7.0",
+        "calebporzio/sushi": "^2.5",
         "laravel/folio": "^1.1",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
