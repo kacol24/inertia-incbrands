@@ -113,4 +113,6 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'contact_email' => env('MAIL_CONTACT', 'kacol.bot@gmail.com'),
+
 ];

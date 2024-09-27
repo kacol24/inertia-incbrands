@@ -13,7 +13,7 @@ class ContactForm extends Component
 
     public function handleSubmit()
     {
-        if (Mail::to('kacol.bot@gmail.com')
+        if (Mail::to(config('mail.contact_email'))
                 ->send(new ContactFormSubmission($this->form))) {
             session()->flash('success', 'Thank you for contacting us!');
             $this->form->reset();
