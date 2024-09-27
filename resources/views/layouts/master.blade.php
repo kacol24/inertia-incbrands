@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 
-    <title>Bootstrap demo</title>
+    <title>@yield('site_title', 'INDOGO CORP. | Inc Brands')</title>
 
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css,npm/aos@2.3.4/dist/aos.min.css">
@@ -33,7 +33,9 @@
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="background-image: none;width: 1em;height: 1em;">
+                        {{-- @formatter:off --}}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#5faa52" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                        {{-- @formatter:on --}}
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

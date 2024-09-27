@@ -10,6 +10,8 @@ $banners = Slider::get();
 
 @extends('layouts.master')
 
+@section('site_title', 'INDOGO CORP. | Inc Brands')
+
 @push('before_styles')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
 @endpush

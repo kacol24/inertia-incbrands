@@ -11,6 +11,8 @@ $packagings = NuudoPackaging::get();
 
 @extends('layouts.master')
 
+@section('site_title', 'Nuudo | INDOGO CORP.')
+
 @push('after_styles')
     <style>
         :root {

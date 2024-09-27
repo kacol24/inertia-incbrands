@@ -9,6 +9,8 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
 
 @extends('layouts.master')
 
+@section('site_title', 'Pureco | INDOGO CORP.')
+
 @push('after_styles')
     <style>
         :root {
