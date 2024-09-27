@@ -125,7 +125,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
             <div class="text-center" data-aos="fade-up">
                 <div class="fw-bold font:gotham-rounded display-5 text-white position-relative"
                      style="z-index: 1; text-shadow: 1px 1px 0 #62d00c, -1px 1px 3px #62d00c, 1px -1px 3px #62d00c, -1px -1px 3px #62d00c, 3px 3px 0 #62d00c, -3px 3px 3px #62d00c, 3px -3px 3px #62d00c, -3px -3px 3px #62d00c">
-                    Find you Safer Choice
+                    Find your Safer Choice
                 </div>
                 <div class="rounded-pill px-4 py-2 font:gotham-rounded fw-bold display-5 text-white d-inline-block lh-1"
                      style="background-color:#434f57;margin-top: -15px;">

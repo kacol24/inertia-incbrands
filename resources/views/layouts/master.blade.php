@@ -57,8 +57,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a @class(['nav-link', 'active' => request()->routeIs()])
-                               href="#">
+                            <a @class(['nav-link', 'active' => request()->routeIs('static.nuudo')])
+                               href="{{ route('static.nuudo') }}">
                                 Nuudo
                             </a>
                         </li>

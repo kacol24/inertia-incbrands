@@ -101,5 +101,66 @@ class Testimonial extends Model
             'image_path' => 'images/pureco/p12.png',
             'title'      => '',
         ],
+
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p1.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p2.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p3.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p4.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p5.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p6.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p7.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p8.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p9.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p10.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p11.png',
+            'title'      => '',
+        ],
+        [
+            'product'    => 'nuudo',
+            'image_path' => 'images/nuudo/p12.png',
+            'title'      => '',
+        ],
     ];
 }
