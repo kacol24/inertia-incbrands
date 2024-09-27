@@ -38,9 +38,12 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                         class="img-fluid w-100 lozad">
                 </div>
                 <div class="col-md">
-                    <div style="background-color:#435057;" class="h-100 p-3 d-flex align-items-center">
+                    <div style="background-color:#435057;" class="h-100 p-md-5 p-3 d-flex align-items-center">
                         <div>
-                            <div class="font:gotham-rounded fs-4 text-white mb-3">
+                            <div class="mb-4">
+                                <img src="{{ asset('images/pureco-logo.png') }}" alt="" class="img-fluid">
+                            </div>
+                            <div class="font:gotham-rounded fs-4 text-white mb-4">
                                 One stop solution for<br>
                                 <strong>
                                     <span class="text-color:brand">plant based</span> home cleaning appliances
@@ -124,7 +127,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                      style="z-index: 1; text-shadow: 1px 1px 0 #62d00c, -1px 1px 3px #62d00c, 1px -1px 3px #62d00c, -1px -1px 3px #62d00c, 3px 3px 0 #62d00c, -3px 3px 3px #62d00c, 3px -3px 3px #62d00c, -3px -3px 3px #62d00c">
                     Find you Safer Choice
                 </div>
-                <div class="rounded-pill px-4 py-2 font:gotham-rounded fw-bold display-5 text-white d-inline-block"
+                <div class="rounded-pill px-4 py-2 font:gotham-rounded fw-bold display-5 text-white d-inline-block lh-1"
                      style="background-color:#434f57;margin-top: -15px;">
                     For Household Cleaning Supplies, with Pureco
                 </div>
