@@ -143,7 +143,12 @@
 <script
     src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js,npm/aos@2.3.4"></script>
 @stack('before_scripts')
-<script src="{{ mix('/js/app.js') }}"></script>
+{{--<script src="{{ mix('/js/app.js') }}"></script>--}}
+<script>
+    AOS.init();
+
+    (lozad()).observe();
+</script>
 @stack('after_scripts')
 </body>
 </html>
