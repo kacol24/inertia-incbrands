@@ -303,35 +303,7 @@ $banners = Slider::get();
                     <h3 class="section-title fs-2 section-title--sm mb-md-5 mb-3 mt-5 mt-md-0">
                         LET US HEAR FROM YOU
                     </h3>
-                    <form action="">
-                        <div class="mb-3 mb-md-5">
-                            <label for="contact_name" class="form-label">
-                                Your Name (required)
-                            </label>
-                            <input type="text" class="form-control" id="contact_name" name="name">
-                        </div>
-                        <div class="mb-3 mb-md-5">
-                            <label for="contact_email" class="form-label">
-                                Your Email (required)
-                            </label>
-                            <input type="email" class="form-control" id="contact_email" name="email">
-                        </div>
-                        <div class="mb-3 mb-md-5">
-                            <label for="contact_subject" class="form-label">
-                                Subject
-                            </label>
-                            <input type="text" class="form-control" id="contact_subject" name="subject">
-                        </div>
-                        <div class="mb-3 mb-md-5">
-                            <label for="contact_message" class="form-label">
-                                Your Message
-                            </label>
-                            <textarea class="form-control" id="contact_message" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn font:gotham-rounded fw-bold text-color:green fs-5">
-                            Send
-                        </button>
-                    </form>
+                    <livewire:contact-form/>
                 </div>
             </div>
         </div>
