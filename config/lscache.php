@@ -9,7 +9,7 @@ return [
     /**
      * Default cache TTL in seconds
      */
-    'default_ttl' => env('LSCACHE_DEFAULT_TTL', 3600),
+    'default_ttl' => env('LSCACHE_DEFAULT_TTL', 3600 * 24 * 2),
 
     /**
      * Default cache storage
