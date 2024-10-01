@@ -5,6 +5,29 @@ use function Laravel\Folio\name;
 
 name('static.babygo');
 $testimonials = Testimonial::where('product', 'babygo')->get();
+
+$features = [
+    (object) [
+        'image_path' => 'images/babygo/Photo-2.jpeg',
+        'title'      => 'Diaper Bag',
+    ],
+    (object) [
+        'image_path' => 'images/babygo/Photo-3.jpeg',
+        'title'      => 'Cooler Bag',
+    ],
+    (object) [
+        'image_path' => 'images/babygo/Photo-4.jpeg',
+        'title'      => 'Organizer',
+    ],
+    (object) [
+        'image_path' => 'images/babygo/Photo-5.jpeg',
+        'title'      => 'Accessories',
+    ],
+    (object) [
+        'image_path' => 'images/babygo/Photo-6.jpeg',
+        'title'      => 'Hooks',
+    ],
+];
 ?>
 
 @extends('layouts.master')
@@ -16,8 +39,57 @@ $testimonials = Testimonial::where('product', 'babygo')->get();
         :root {
             --brand-color: #068046;
             --brand-color-light: rgb(7.1417910448, 152.3582089552, 83.3208955224);
+            --swiper-theme-color: #ffa600;
         }
     </style>
+@endpush
+
+@push('after_scripts')
+    <script>
+        new Swiper('.feature-swiper', {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            freeMode: true,
+            spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    enabled: false
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+        new Swiper('.testimonial-swiper', {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            freeMode: true,
+            spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    spaceBetween: 32,
+                    enabled: false,
+                    centeredSlides: false,
+                    freeMode: false,
+                    loopAddBlankSlides: true,
+                    slidesPerView: 3,
+                    grid: {
+                        fill: 'rows',
+                        rows: 2
+                    }
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    </script>
 @endpush
 
 @section('content')
@@ -48,80 +120,53 @@ $testimonials = Testimonial::where('product', 'babygo')->get();
                 Designed to Ease Every Parent’s Life,<br class="d-none d-md-block">
                 Discover Your Perfect Fit with babyGo’s Product
             </h2>
-            <div class="mt-5">
-                <div class="row justify-content-center"
-                     style="--color-border: #ffa600; --color-text: #504f4f; --margin-text: -1rem;">
-                    <div class="col-md-3 col-8">
-                        <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
-                             data-aos="fade-down">
-                            <div class="rounded-circle border"
-                                 style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                <img src="{{ asset('images/babygo/Photo-2.jpeg') }}" alt=""
-                                     class="img-fluid rounded-circle">
-                            </div>
-                            <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
-                                 style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                Diaper Bag
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-8">
-                        <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
-                             data-aos="fade-down">
-                            <div class="rounded-circle border"
-                                 style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                <img src="{{ asset('images/babygo/Photo-3.jpeg') }}" alt=""
-                                     class="img-fluid rounded-circle">
-                            </div>
-                            <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
-                                 style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                Cooler Bag
+        </div>
+        <div class="mt-5"
+             style="--color-border: #ffa600; --color-text: #504f4f; --margin-text: -1rem;">
+            <div class="swiper feature-swiper d-block d-md-none">
+                <div class="swiper-wrapper">
+                    @foreach($features as $feature)
+                        <div class="swiper-slide">
+                            <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
+                                 data-aos="fade-down">
+                                <div class="rounded-circle border"
+                                     style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
+                                    <img src="{{ asset($feature->image_path) }}" alt=""
+                                         class="img-fluid rounded-circle">
+                                </div>
+                                <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
+                                     style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
+                                    {{ $feature->title }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-100 my-3 d-none d-md-block"></div>
-                    <div class="col-md-3 col-8">
-                        <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
-                             data-aos="fade-down">
-                            <div class="rounded-circle border"
-                                 style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                <img src="{{ asset('images/babygo/Photo-4.jpeg') }}" alt=""
-                                     class="img-fluid rounded-circle">
-                            </div>
-                            <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
-                                 style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                Organizer
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-8">
-                        <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
-                             data-aos="fade-down">
-                            <div class="rounded-circle border"
-                                 style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                <img src="{{ asset('images/babygo/Photo-5.jpeg') }}" alt=""
-                                     class="img-fluid rounded-circle">
-                            </div>
-                            <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
-                                 style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                Accessories
+                    @endforeach
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="container d-none d-md-block">
+                <div class="row justify-content-center">
+                    @foreach($features as $feature)
+                        <div class="col-md-3 col-8">
+                            <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
+                                 data-aos="fade-down">
+                                <div class="rounded-circle border"
+                                     style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
+                                    <img src="{{ asset($feature->image_path) }}" alt=""
+                                         class="img-fluid rounded-circle">
+                                </div>
+                                <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
+                                     style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
+                                    {{ $feature->title }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-8">
-                        <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
-                             data-aos="fade-down">
-                            <div class="rounded-circle border"
-                                 style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                <img src="{{ asset('images/babygo/Photo-6.jpeg') }}" alt=""
-                                     class="img-fluid rounded-circle">
-                            </div>
-                            <div class="badge rounded-pill font:gotham-rounded fw-bold py-2 fs-3 w-75"
-                                 style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                Hooks
-                            </div>
-                        </div>
-                    </div>
+                        @if($loop->index == 1)
+                            <div class="w-100 my-3"></div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -188,8 +233,8 @@ $testimonials = Testimonial::where('product', 'babygo')->get();
         <div class="container">
             <div class="card rounded-5"
                  style="--bs-card-bg: #fff2ec; --bs-card-border-width: 0; --bs-border-radius-xxl: 32px">
-                <div class="card-body p-3 p-md-5 pt-0">
-                    <div class="text-center">
+                <div class="card-body p-0">
+                    <div class="text-center p-3 p-md-5 pt-0">
                         <h2 class="rounded-pill mb-3 text-white font:gotham-rounded fw-bold h2 d-inline-block px-4 py-2 lh-1"
                             style="background-color:var(--brand-color);margin-top: -20px;">
                             babyGo
@@ -200,27 +245,28 @@ $testimonials = Testimonial::where('product', 'babygo')->get();
                             mobility for family's journey with their little ones
                         </div>
                     </div>
-                    <div class="mt-3" style="--color-border: #ffa600; --color-text: #fff; --margin-text: -1rem;">
-                        <div class="row justify-content-around">
-                            @foreach($testimonials as $testimonial)
-                                <div class="col-md-3">
-                                    <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
-                                         data-aos="fade-down">
-                                        <div class="rounded-5 border"
-                                             style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
-                                            <img src="{{ asset($testimonial->image_path) }}" alt=""
-                                                 class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
-                                        </div>
-                                        <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
-                                             style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
-                                            {{ $testimonial->title }}
+                    <div class="mt-3 p-3 px-0 p-md-5 pt-0" style="--color-border: #ffa600; --color-text: #fff; --margin-text: -1rem;">
+                        <div class="swiper testimonial-swiper">
+                            <div class="swiper-wrapper">
+                                @foreach($testimonials as $testimonial)
+                                    <div class="swiper-slide">
+                                        <div class="d-flex align-items-center flex-column mb-3 mb-md-0"
+                                             data-aos="fade-down">
+                                            <div class="rounded-5 border"
+                                                 style="--bs-border-width: 5px; --bs-border-color: var(--color-border)">
+                                                <img src="{{ asset($testimonial->image_path) }}" alt=""
+                                                     class="img-fluid rounded-5" style="--bs-border-radius-xxl: 27px;">
+                                            </div>
+                                            <div class="badge rounded-pill font:gotham-rounded fw-medium py-2 px-4 fs-5"
+                                                 style="color: var(--color-text); background-color:var(--color-border);margin-top: var(--margin-text);">
+                                                {{ $testimonial->title }}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                @if($loop->iteration % 3 == 0)
-                                    <div class="w-100 mb-md-5"></div>
-                                @endif
-                            @endforeach
+                                @endforeach
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
                 </div>
@@ -265,7 +311,8 @@ $testimonials = Testimonial::where('product', 'babygo')->get();
             </div>
             <div class="row justify-content-around mt-3">
                 <div class="col-md-auto mb-3 mb-md-0">
-                    <a href="https://babygoinc.com/" target="_blank" class="px-4 py-2 rounded-pill btn fw-bold font:gotham-rounded fs-5"
+                    <a href="https://babygoinc.com/" target="_blank"
+                       class="px-4 py-2 rounded-pill btn fw-bold font:gotham-rounded fs-5"
                        style="--bs-btn-color: #fff;--bs-btn-hover-color: #fff; --bs-btn-bg:var(--brand-color);--bs-btn-hover-border-color:var(--brand-color-light);--bs-btn-hover-bg: var(--brand-color-light)">
                         <div style="width: 1em;" class="d-inline-block me-2">
                             {{-- @formatter:off --}}

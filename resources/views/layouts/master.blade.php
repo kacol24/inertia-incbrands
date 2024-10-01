@@ -24,6 +24,7 @@
 
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css,npm/aos@2.3.4/dist/aos.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
     @stack('before_styles')
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @stack('after_styles')
@@ -142,6 +143,7 @@
 </footer>
 <script
     src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js,npm/aos@2.3.4"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
 @stack('before_scripts')
 {{--<script src="{{ mix('/js/app.js') }}"></script>--}}
 <script>

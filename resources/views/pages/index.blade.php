@@ -13,11 +13,10 @@ $banners = Slider::get();
 @section('site_title', 'INDOGO CORP. | Inc Brands')
 
 @push('before_styles')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+
 @endpush
 
 @push('before_scripts')
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js"></script>
     <script>
         new Swiper('.hero-swiper', {
