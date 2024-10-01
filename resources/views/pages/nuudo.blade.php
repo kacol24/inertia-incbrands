@@ -21,6 +21,7 @@ $packagings = NuudoPackaging::get();
             --text-color-base: #435058;
 
             --brand-color-alt: #a0d7f5;
+            --swiper-theme-color: #ff9700;
         }
 
         body {
@@ -31,6 +32,37 @@ $packagings = NuudoPackaging::get();
             color: var(--brand-color);
         }
     </style>
+@endpush
+
+@push('after_scripts')
+    <script>
+        new Swiper('.testimonial-swiper', {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            freeMode: true,
+            spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    spaceBetween: 32,
+                    enabled: false,
+                    centeredSlides: false,
+                    freeMode: false,
+                    loopAddBlankSlides: true,
+                    slidesPerView: 4,
+                    grid: {
+                        fill: 'rows',
+                        rows: 3
+                    }
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    </script>
 @endpush
 
 @section('content')
@@ -287,14 +319,20 @@ $packagings = NuudoPackaging::get();
                     Where Natural Goodness Meets Everyday Care
                 </div>
             </div>
-            <div class="row mt-4 overflow-hidden">
-                @foreach($testimonials as $testimonial)
-                    <div class="col-md-3 mb-3">
-                        <div data-aos="fade-left" data-aos-delay="{{ $loop->index * 50 }}">
-                            <img src="{{ asset($testimonial->image_path) }}" alt="" class="img-fluid w-100">
-                        </div>
+            <div class="mt-4">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        @foreach($testimonials as $testimonial)
+                            <div class="swiper-slide">
+                                <div data-aos="fade-left" data-aos-delay="{{ $loop->index * 50 }}">
+                                    <img src="{{ asset($testimonial->image_path) }}" alt="" class="img-fluid w-100">
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                @endforeach
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </div>
     </section>
