@@ -13,6 +13,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web(append: [
             \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+            \Litespeed\LSCache\LSCacheMiddleware::class,
+            \Litespeed\LSCache\LSTagsMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

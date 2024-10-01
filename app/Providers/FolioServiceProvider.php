@@ -23,6 +23,8 @@ class FolioServiceProvider extends ServiceProvider
         Folio::path(resource_path('views/pages'))->middleware([
             '*' => [
                 \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+                \Litespeed\LSCache\LSCacheMiddleware::class,
+                \Litespeed\LSCache\LSTagsMiddleware::class,
             ],
         ]);
     }
