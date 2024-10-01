@@ -17,6 +17,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
             --brand-color: #61d10e;
             --brand-color-light: #5ab516;
             --text-color-base: #435058;
+            --swiper-theme-color: #61d10e;
         }
 
         body {
@@ -27,6 +28,37 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
             color: var(--brand-color);
         }
     </style>
+@endpush
+
+@push('after_scripts')
+    <script>
+        new Swiper('.testimonial-swiper', {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            freeMode: true,
+            spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    spaceBetween: 32,
+                    enabled: false,
+                    centeredSlides: false,
+                    freeMode: false,
+                    loopAddBlankSlides: true,
+                    slidesPerView: 4,
+                    grid: {
+                        fill: 'rows',
+                        rows: 3
+                    }
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    </script>
 @endpush
 
 @section('content')
@@ -134,14 +166,20 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                     For Household Cleaning Supplies, with Pureco
                 </div>
             </div>
-            <div class="row mt-3 overflow-hidden">
-                @foreach($testimonials as $testimonial)
-                    <div class="col-md-3 mb-3">
-                        <div data-aos="fade-left" data-aos-delay="{{ $loop->index * 50 }}">
-                            <img src="{{ asset($testimonial->image_path) }}" alt="" class="img-fluid w-100">
-                        </div>
+            <div class="mt-3">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        @foreach($testimonials as $testimonial)
+                            <div class="swiper-slide">
+                                <div data-aos="fade-left" data-aos-delay="{{ $loop->index * 50 }}">
+                                    <img src="{{ asset($testimonial->image_path) }}" alt="" class="img-fluid w-100">
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                @endforeach
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </div>
     </section>
