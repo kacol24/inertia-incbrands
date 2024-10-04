@@ -131,7 +131,7 @@ $packagings = NuudoPackaging::get();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="showcase mb-5">
+                    <div class="showcase mb-md-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
                                 <img src="{{ asset('images/nuudo/logo-nuudo.png') }}" alt="" class="img-fluid"
@@ -151,13 +151,13 @@ $packagings = NuudoPackaging::get();
                                     Kids Wash<br>
                                     Body Lotion
                                 </div>
-                                <div class="col-md font:gotham-rounded fs-5">
-                                    <div class="d-flex align-items-center h-100">
-                                        <div style="max-width: 100px">
+                                <div class="col-md font:gotham-rounded fs-5 mt-3 mt-md-0">
+                                    <div class="row">
+                                        <div class="col-3">
                                             <img src="{{ asset('images/icons/formulate.png') }}" alt=""
                                                  class="img-fluid">
                                         </div>
-                                        <div class="ms-3">
+                                        <div class="col">
                                             Formulated using blends of plant extract and oil
                                         </div>
                                     </div>
@@ -166,8 +166,11 @@ $packagings = NuudoPackaging::get();
                         </div>
                     </div>
                 </div>
+                <div class="container d-block d-md-none">
+                    <hr style="color: #4c4c4c" class="my-5">
+                </div>
                 <div class="col-md-6">
-                    <div class="showcase mb-5">
+                    <div class="showcase mb-md-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
                                 <img src="{{ asset('images/nuudo/Asset-2.png') }}" alt="" class="img-fluid"
@@ -188,13 +191,13 @@ $packagings = NuudoPackaging::get();
                                     Body & Face Cream<br>
                                     Barrier Balm
                                 </div>
-                                <div class="col-md font:gotham-rounded fs-5">
-                                    <div class="d-flex align-items-center h-100">
-                                        <div style="max-width: 100px">
+                                <div class="col-md font:gotham-rounded fs-5 mt-3 mt-md-0">
+                                    <div class="row">
+                                        <div class="col-3">
                                             <img src="{{ asset('images/icons/formulate.png') }}" alt=""
                                                  class="img-fluid">
                                         </div>
-                                        <div class="ms-3">
+                                        <div class="col">
                                             Formulated using blends of plant butter and oil
                                         </div>
                                     </div>
@@ -203,8 +206,11 @@ $packagings = NuudoPackaging::get();
                         </div>
                     </div>
                 </div>
+                <div class="container d-block d-md-none">
+                    <hr style="color: #4c4c4c" class="my-5">
+                </div>
                 <div class="col-md-6">
-                    <div class="showcase mb-5">
+                    <div class="showcase mb-md-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
                                 <img src="{{ asset('images/nuudo/logo-nuudo-haricare.png') }}" alt="" class="img-fluid"
@@ -223,13 +229,13 @@ $packagings = NuudoPackaging::get();
                                     Kids Shampoo<br>
                                     Hair Lotion
                                 </div>
-                                <div class="col-md-8 font:gotham-rounded fs-5">
-                                    <div class="d-flex align-items-center h-100">
-                                        <div style="max-width: 100px">
+                                <div class="col-md-8 font:gotham-rounded fs-5 mt-3 mt-md-0">
+                                    <div class="row">
+                                        <div class="col-3">
                                             <img src="{{ asset('images/icons/formulate.png') }}" alt=""
                                                  class="img-fluid">
                                         </div>
-                                        <div class="ms-3">
+                                        <div class="col">
                                             Formulated using blends of plant extract and oil
                                         </div>
                                     </div>
@@ -237,6 +243,9 @@ $packagings = NuudoPackaging::get();
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container d-block d-md-none">
+                    <hr style="color: #4c4c4c" class="my-5">
                 </div>
                 <div class="col-md-6">
                     <div class="showcase mb-5">
