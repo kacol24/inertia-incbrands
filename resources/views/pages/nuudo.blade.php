@@ -62,6 +62,33 @@ $packagings = NuudoPackaging::get();
                 prevEl: '.swiper-button-prev'
             }
         });
+
+        new Swiper('.packaging-swiper', {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            freeMode: true,
+            spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    spaceBetween: 32,
+                    enabled: false,
+                    centeredSlides: false,
+                    freeMode: false,
+                    loopAddBlankSlides: true,
+                    slidesPerView: 4,
+                    grid: {
+                        fill: 'rows',
+                        rows: 2
+                    }
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
     </script>
 @endpush
 
@@ -304,15 +331,19 @@ $packagings = NuudoPackaging::get();
             </div>
         </div>
         <div class="py-5 mt-3" style="background-color:#dedcdf;">
-            <div class="container">
-                <div class="row">
-                    @foreach($packagings as $packaging)
-                        <div class="col-md-3 col-6">
-                            <div data-aos="fade-down" data-aos-delay="{{ $loop->index * 100 }}">
-                                <img src="{{ asset($packaging->image_path) }}" alt="" class="img-fluid w-100">
+            <div class="container px-0 px-md-3">
+                <div class="swiper packaging-swiper">
+                    <div class="swiper-wrapper">
+                        @foreach($packagings as $packaging)
+                            <div class="swiper-slide">
+                                <div data-aos="fade-down" data-aos-delay="{{ $loop->index * 100 }}">
+                                    <img src="{{ asset($packaging->image_path) }}" alt="" class="img-fluid w-100">
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
