@@ -36,7 +36,7 @@
         <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('images/logo@1x.png') }}" alt="logo Inc Brands" class="img-fluid">
+                    <img src="{{ asset('images/logo@1x.png', true) }}" alt="logo Inc Brands" class="img-fluid">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -105,7 +105,7 @@
             <div class="col-md-3 mb-5 mb-md-0 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="{{ asset('images/indogo-logo-footer-150x100.png') }}"
+                        <img src="{{ asset('images/indogo-logo-footer-150x100.png', true) }}"
                              alt="logo inc brands" class="img-fluid">
                     </div>
                     We offer premium products for baby, kids, and family
@@ -114,7 +114,7 @@
             <div class="col-md-3 mb-5 mb-md-0 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="{{ asset('images/babygo-logo-footer-150x100.png') }}"
+                        <img src="{{ asset('images/babygo-logo-footer-150x100.png', true) }}"
                              alt="logo babygo" class="img-fluid">
                     </div>
                     Making parents life easier with fashionable diaper & cooler bags
@@ -123,7 +123,7 @@
             <div class="col-md-3 mb-5 mb-md-0 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="{{ asset('images/pureco-logo-footer-150x100.png') }}"
+                        <img src="{{ asset('images/pureco-logo-footer-150x100.png', true) }}"
                              alt="logo inc brands" class="img-fluid">
                     </div>
                     Plant based home cleaning appliances, choose SAFE choose PURECO
@@ -132,7 +132,7 @@
             <div class="col-md-3 col-8">
                 <div class="text-center">
                     <div class="mb-1">
-                        <img src="{{ asset('images/logo-nuudo.png') }}"
+                        <img src="{{ asset('images/logo-nuudo.png', true) }}"
                              alt="logo inc brands" class="img-fluid">
                     </div>
                     Where natural goodness meet everyday care

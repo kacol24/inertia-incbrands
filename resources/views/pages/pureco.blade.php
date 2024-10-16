@@ -68,14 +68,14 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                 <div class="col-md-7">
                     <img
                         src="{{ Croppa::url('images/banners/Pureco-4.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-                        data-src="{{ asset('images/banners/Pureco-4.jpeg') }}" alt="banner hero"
+                        data-src="{{ asset('images/banners/Pureco-4.jpeg', true) }}" alt="banner hero"
                         class="img-fluid w-100 lozad">
                 </div>
                 <div class="col-md">
                     <div style="background-color:#435057;" class="h-100 p-md-5 p-3 d-flex align-items-center">
                         <div>
                             <div class="mb-4">
-                                <img src="{{ asset('images/pureco-logo.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('images/pureco-logo.png', true) }}" alt="" class="img-fluid">
                             </div>
                             <div class="font:gotham-rounded fs-4 text-white mb-4">
                                 One stop solution for<br>
@@ -84,7 +84,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                                 </strong>
                             </div>
                             <div data-aos="fade-down">
-                                <img src="{{ asset('images/banner-baby-kids-family.png') }}" alt=""
+                                <img src="{{ asset('images/banner-baby-kids-family.png', true) }}" alt=""
                                      class="img-fluid w-100 px-md-5">
                             </div>
                         </div>
@@ -98,7 +98,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
     </div>
     <img
         src="{{ Croppa::url('images/Pureco-All Product.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-        data-src="{{ asset('images/Pureco-All Product.jpeg') }}" alt="banner all products"
+        data-src="{{ asset('images/Pureco-All Product.jpeg', true) }}" alt="banner all products"
         class="img-fluid w-100 lozad">
     <section class="mt-4" style="color: #435058">
         <div class="container">
@@ -110,7 +110,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
             <div class="row align-items-center mt-3 justify-content-center">
                 <div class="col-5 col-md-1 mb-3 mb-md-0">
                     <div data-aos="zoom-in">
-                        <img src="{{ asset('images/icons/pbai.png') }}" alt="" class="img-fluid w-100">
+                        <img src="{{ asset('images/icons/pbai.png', true) }}" alt="" class="img-fluid w-100">
                     </div>
                 </div>
                 <div class="col-md fs-4">
@@ -130,7 +130,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                 <div class="col-md-7">
                     <img
                         src="{{ Croppa::url('images/banners/081A8674.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-                        data-src="{{ asset('images/banners/081A8674.jpeg') }}" alt="banner hero"
+                        data-src="{{ asset('images/banners/081A8674.jpeg', true) }}" alt="banner hero"
                         class="img-fluid w-100 lozad">
                 </div>
                 <div class="col-md">
@@ -142,7 +142,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                                 sensitive skin
                             </div>
                             <div data-aos="fade-left">
-                                <img src="{{ asset('images/formulated-without.png') }}" alt=""
+                                <img src="{{ asset('images/formulated-without.png', true) }}" alt=""
                                      class="img-fluid w-100 px-md-5 mt-3">
                             </div>
                         </div>
@@ -172,7 +172,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
                         @foreach($testimonials as $testimonial)
                             <div class="swiper-slide">
                                 <div data-aos="fade-left" data-aos-delay="{{ $loop->index * 50 }}">
-                                    <img src="{{ asset($testimonial->image_path) }}" alt="" class="img-fluid w-100">
+                                    <img src="{{ asset($testimonial->image_path, true) }}" alt="" class="img-fluid w-100">
                                 </div>
                             </div>
                         @endforeach
@@ -189,7 +189,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
     <section>
         <div class="container text-center mb-5 overflow-hidden">
             <div style="max-width: 800px" class="mx-auto my-5">
-                <img src="{{ asset('images/baby-kids-family.png') }}" alt="" class="img-fluid w-100">
+                <img src="{{ asset('images/baby-kids-family.png', true) }}" alt="" class="img-fluid w-100">
             </div>
             <h2 class="display-3 fw-bold font:gotham-rounded">
                 Choose <span class="text-color:brand" data-aos="fade-down">SAFE</span>, Choose <span
@@ -198,7 +198,7 @@ $testimonials = Testimonial::where('product', 'pureco')->get();
         </div>
         <img
             src="{{ Croppa::url('images/banners/081A8826.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-            data-src="{{ asset('images/banners/081A8826.jpeg') }}" alt="banner hero"
+            data-src="{{ asset('images/banners/081A8826.jpeg', true) }}" alt="banner hero"
             class="img-fluid w-100 lozad">
     </section>
 
