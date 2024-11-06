@@ -10,7 +10,5 @@ Artisan::command('inspire', function () {
 Artisan::command('deploy', function (){
     $this->call('optimize:clear');
     $this->call('optimize');
-    $this->call('opcache:compile', [
-        '--force'
-    ]);
+    $this->call('opcache:compile --force');
 });
