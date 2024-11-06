@@ -22,13 +22,14 @@
     <meta name="msapplication-TileColor" content="#5faa52">
     <meta name="theme-color" content="#5faa52">
 
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css,npm/aos@2.3.4/dist/aos.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
     @stack('before_styles')
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @stack('after_styles')
-    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+    @livewireStyles
 </head>
 <body class="d-flex flex-column h-100">
 <div class="flex-shrink-0">
@@ -144,6 +145,7 @@
 <script
     src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js,npm/aos@2.3.4"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+@livewireScripts
 @stack('before_scripts')
 {{--<script src="{{ mix('/js/app.js') }}"></script>--}}
 <script>
