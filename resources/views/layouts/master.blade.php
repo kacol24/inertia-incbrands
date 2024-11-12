@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#5faa52">
     <meta name="theme-color" content="#5faa52">
 
-    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" async></script>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css,npm/aos@2.3.4/dist/aos.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
@@ -203,9 +203,9 @@
 @stack('before_scripts')
 {{--<script src="{{ mix('/js/app.js') }}"></script>--}}
 <script>
-    AOS.init();
-
     (lozad()).observe();
+
+    AOS.init();
 </script>
 @stack('after_scripts')
 <div
