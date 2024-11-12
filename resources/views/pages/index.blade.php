@@ -47,7 +47,7 @@ $banners = Slider::get();
                     <div class="swiper-slide">
                         <img
                             src="{{ Croppa::url($banner->image_path, width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-                            data-src="{{ asset($banner->image_path, true) }}" alt="banner {{ $loop->iteration }}"
+                            data-src="{{ asset($banner->image_path, ! config('app.debug')) }}" alt="banner {{ $loop->iteration }}"
                             class="img-fluid w-100 lozad">
                         <div class="swiper-lazy-preloader"></div>
                     </div>
@@ -62,7 +62,7 @@ $banners = Slider::get();
         <div class="container">
             <div class="text-center">
                 <div class="mb-4">
-                    <img src="{{ asset('images/BBGO-PNG-400x100px-2-300x75.png', true) }}" alt="indogo corp illustration"
+                    <img src="{{ asset('images/BBGO-PNG-400x100px-2-300x75.png', ! config('app.debug')) }}" alt="indogo corp illustration"
                          class="img-fluid">
                 </div>
                 <div class="intro__content m-auto fs-3">
@@ -77,7 +77,7 @@ $banners = Slider::get();
                     </div>
                 </div>
                 <div class="mt-4">
-                    <img src="{{ asset('images/BBGO-PNG-400x100px-inc-300x75.png', true) }}" alt="indogo corp illustration"
+                    <img src="{{ asset('images/BBGO-PNG-400x100px-inc-300x75.png', ! config('app.debug')) }}" alt="indogo corp illustration"
                          class="img-fluid">
                 </div>
             </div>
@@ -86,7 +86,7 @@ $banners = Slider::get();
                     <div class="col-md-3">
                         <div class="text-center px-5"
                              data-aos="fade-right">
-                            <img src="{{ asset('images/icons/ourvision.png', true) }}" alt="" class="img-fluid">
+                            <img src="{{ asset('images/icons/ourvision.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             <div class="mt-3">
                                 To <strong class="font:gotham-rounded text-color:orange">INNOVATE</strong> products that
                                 will give solutions to a family
@@ -96,7 +96,7 @@ $banners = Slider::get();
                     <div class="col-md-3">
                         <div class="text-center px-5"
                              data-aos="fade-up">
-                            <img src="{{ asset('images/icons/ourmission.png', true) }}" alt="" class="img-fluid">
+                            <img src="{{ asset('images/icons/ourmission.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             <div class="mt-3">
                                 Provide useful products to help parents taking care of their babies since <strong
                                     class="font:gotham-rounded text-color:blue">NEWBORN</strong>
@@ -106,7 +106,7 @@ $banners = Slider::get();
                     <div class="col-md-3">
                         <div class="text-center px-5"
                              data-aos="fade-left">
-                            <img src="{{ asset('images/icons/ourvalue.png', true) }}" alt="" class="img-fluid">
+                            <img src="{{ asset('images/icons/ourvalue.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             <div class="mt-3">
                                 Because we know how much you <strong
                                     class="font:gotham-rounded text-color:red">CARE</strong> for your little ones, and
@@ -127,19 +127,19 @@ $banners = Slider::get();
                 <div class="row justify-content-around">
                     <div class="col-md-3 mb-3 mb-md-0 col-10">
                         <a href="" data-aos="fade-down">
-                            <img src="{{ asset('images/Our-Brands_Babygo.png', true) }}" alt="babygo brand"
+                            <img src="{{ asset('images/Our-Brands_Babygo.png', ! config('app.debug')) }}" alt="babygo brand"
                                  class="img-fluid w-100">
                         </a>
                     </div>
                     <div class="col-md-3 mb-3 mb-md-0 col-10">
                         <a href="" data-aos="fade-down">
-                            <img src="{{ asset('images/Our-Brands_Pureco.png', true) }}" alt="pureco brand"
+                            <img src="{{ asset('images/Our-Brands_Pureco.png', ! config('app.debug')) }}" alt="pureco brand"
                                  class="img-fluid w-100">
                         </a>
                     </div>
                     <div class="col-md-3 mb-3 mb-md-0 col-10">
                         <a href="" data-aos="fade-down">
-                            <img src="{{ asset('images/Our-Brands_Nuudo.png', true) }}" alt="nuudo brand"
+                            <img src="{{ asset('images/Our-Brands_Nuudo.png', ! config('app.debug')) }}" alt="nuudo brand"
                                  class="img-fluid w-100">
                         </a>
                     </div>
@@ -161,16 +161,16 @@ $banners = Slider::get();
                     <div class="col-md">
                         <div class="row align-items-center g-0 mb-3 mb-md-0">
                             <div class="col-6 text-center">
-                                <img src="{{ asset('images/Logo-Babygo.png', true) }}" alt="" class="img-fluid">
+                                <img src="{{ asset('images/Logo-Babygo.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             </div>
                             <div class="col-6 overflow-hidden">
-                                <img src="{{ asset('images/Icon-CSR-Babygo.jpeg', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/Icon-CSR-Babygo.jpeg', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      data-aos="fade-left">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <img src="{{ asset('images/icons/Sea-turtle-preserve.png', true) }}" alt="" class="img-fluid"
+                        <img src="{{ asset('images/icons/Sea-turtle-preserve.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                              style="max-height: 38px; width:auto;">
                         <div class="mt-3">
                             <span style="color: var(--highlight-color)">BabyGo</span> committed to help preserving sea
@@ -190,16 +190,16 @@ $banners = Slider::get();
                     <div class="col-md">
                         <div class="row align-items-center g-0 mb-3 mb-md-0">
                             <div class="col-6 text-center">
-                                <img src="{{ asset('images/Logo-pureco-inc-RGB-01.png', true) }}" alt="" class="img-fluid">
+                                <img src="{{ asset('images/Logo-pureco-inc-RGB-01.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             </div>
                             <div class="col-6 overflow-hidden">
-                                <img src="{{ asset('images/Icon-CSR-Pureco.png', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/Icon-CSR-Pureco.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      data-aos="fade-left">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <img src="{{ asset('images/icons/CARBON-OFFSET.png', true) }}" alt="" class="img-fluid"
+                        <img src="{{ asset('images/icons/CARBON-OFFSET.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                              style="max-height: 38px; width:auto;">
                         <div class="mt-3">
                             <span style="color: var(--highlight-color)">Pureco</span> committed to support environmental
@@ -219,16 +219,16 @@ $banners = Slider::get();
                     <div class="col-md">
                         <div class="row align-items-center g-0 mb-3 mb-md-0">
                             <div class="col-6 text-center">
-                                <img src="{{ asset('images/nuudo-logo-no-tagline.png', true) }}" alt="" class="img-fluid">
+                                <img src="{{ asset('images/nuudo-logo-no-tagline.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             </div>
                             <div class="col-6 overflow-hidden">
-                                <img src="{{ asset('images/Icon-CSR-Nuudo.png', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/Icon-CSR-Nuudo.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      data-aos="fade-left">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <img src="{{ asset('images/icons/Kids-Education.png', true) }}" alt="" class="img-fluid"
+                        <img src="{{ asset('images/icons/Kids-Education.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                              style="max-height: 38px; width:auto;">
                         <div class="mt-3">
                             <span style="color: var(--highlight-color)">Nuudo</span> committed to support kids

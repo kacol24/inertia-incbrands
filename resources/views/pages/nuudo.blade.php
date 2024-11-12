@@ -99,21 +99,21 @@ $packagings = NuudoPackaging::get();
                 <div class="col-md-7">
                     <img
                         src="{{ Croppa::url('images/banners/Nuudo-9.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-                        data-src="{{ asset('images/banners/Nuudo-9.jpeg', true) }}" alt="banner hero"
+                        data-src="{{ asset('images/banners/Nuudo-9.jpeg', ! config('app.debug')) }}" alt="banner hero"
                         class="img-fluid w-100 lozad">
                 </div>
                 <div class="col-md">
                     <div style="background-color:#f3f3f3;" class="h-100 p-md-5 p-3 d-flex align-items-center">
                         <div>
                             <div class="mb-4" style="max-width: 200px">
-                                <img src="{{ asset('images/nuudo/logo-nuudo.png', true) }}" alt="" class="img-fluid">
+                                <img src="{{ asset('images/nuudo/logo-nuudo.png', ! config('app.debug')) }}" alt="" class="img-fluid">
                             </div>
                             <div class="font:gotham-rounded fs-4 mb-4">
                                 Where <strong class="text-color:brand">natural goodness</strong> meet<br>
                                 everyday care
                             </div>
                             <div data-aos="fade-down">
-                                <img src="{{ asset('images/nuudo/5-icon-orange.png', true) }}" alt=""
+                                <img src="{{ asset('images/nuudo/5-icon-orange.png', ! config('app.debug')) }}" alt=""
                                      class="img-fluid w-100">
                             </div>
                         </div>
@@ -130,7 +130,7 @@ $packagings = NuudoPackaging::get();
             <div class="col-md-8">
                 <img
                     src="{{ Croppa::url('images/banners/081A7000.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-                    data-src="{{ asset('images/banners/081A7000.jpeg', true) }}" alt="banner all products"
+                    data-src="{{ asset('images/banners/081A7000.jpeg', ! config('app.debug')) }}" alt="banner all products"
                     class="img-fluid w-100 lozad">
             </div>
             <div class="col-md-4">
@@ -161,7 +161,7 @@ $packagings = NuudoPackaging::get();
                     <div class="showcase mb-md-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
-                                <img src="{{ asset('images/nuudo/logo-nuudo.png', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/nuudo/logo-nuudo.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      style="max-height: 55px">
                             </div>
                             <h3 class="showcase__subtitle fw-bold font:gotham-rounded fs-3">
@@ -169,7 +169,7 @@ $packagings = NuudoPackaging::get();
                             </h3>
                         </div>
                         <div class="showcase__body">
-                            <img src="{{ asset('images/nuudo/Nuudo-10.jpeg', true) }}" alt="" class="img-fluid w-100">
+                            <img src="{{ asset('images/nuudo/Nuudo-10.jpeg', ! config('app.debug')) }}" alt="" class="img-fluid w-100">
                         </div>
                         <div class="showcase__footer mt-3">
                             <div class="row">
@@ -181,7 +181,7 @@ $packagings = NuudoPackaging::get();
                                 <div class="col-md font:gotham-rounded fs-5 mt-3 mt-md-0">
                                     <div class="row">
                                         <div class="col-3">
-                                            <img src="{{ asset('images/icons/formulate.png', true) }}" alt=""
+                                            <img src="{{ asset('images/icons/formulate.png', ! config('app.debug')) }}" alt=""
                                                  class="img-fluid">
                                         </div>
                                         <div class="col">
@@ -200,7 +200,7 @@ $packagings = NuudoPackaging::get();
                     <div class="showcase mb-md-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
-                                <img src="{{ asset('images/nuudo/Asset-2.png', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/nuudo/Asset-2.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      style="max-height: 55px">
                             </div>
                             <h3 class="showcase__subtitle fw-bold font:gotham-rounded fs-3">
@@ -208,7 +208,7 @@ $packagings = NuudoPackaging::get();
                             </h3>
                         </div>
                         <div class="showcase__body">
-                            <img src="{{ asset('images/nuudo/Nuudo-3.jpeg', true) }}" alt="" class="img-fluid w-100">
+                            <img src="{{ asset('images/nuudo/Nuudo-3.jpeg', ! config('app.debug')) }}" alt="" class="img-fluid w-100">
                         </div>
                         <div class="showcase__footer mt-3">
                             <div class="row">
@@ -221,7 +221,7 @@ $packagings = NuudoPackaging::get();
                                 <div class="col-md font:gotham-rounded fs-5 mt-3 mt-md-0">
                                     <div class="row">
                                         <div class="col-3">
-                                            <img src="{{ asset('images/icons/formulate.png', true) }}" alt=""
+                                            <img src="{{ asset('images/icons/formulate.png', ! config('app.debug')) }}" alt=""
                                                  class="img-fluid">
                                         </div>
                                         <div class="col">
@@ -240,7 +240,7 @@ $packagings = NuudoPackaging::get();
                     <div class="showcase mb-md-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
-                                <img src="{{ asset('images/nuudo/logo-nuudo-haricare.png', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/nuudo/logo-nuudo-haricare.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      style="max-height: 55px">
                             </div>
                             <h3 class="showcase__subtitle fw-bold font:gotham-rounded fs-3">
@@ -248,7 +248,7 @@ $packagings = NuudoPackaging::get();
                             </h3>
                         </div>
                         <div class="showcase__body">
-                            <img src="{{ asset('images/nuudo/nuudo-23.jpeg', true) }}" alt="" class="img-fluid w-100">
+                            <img src="{{ asset('images/nuudo/nuudo-23.jpeg', ! config('app.debug')) }}" alt="" class="img-fluid w-100">
                         </div>
                         <div class="showcase__footer mt-3">
                             <div class="row">
@@ -259,7 +259,7 @@ $packagings = NuudoPackaging::get();
                                 <div class="col-md-8 font:gotham-rounded fs-5 mt-3 mt-md-0">
                                     <div class="row">
                                         <div class="col-3">
-                                            <img src="{{ asset('images/icons/formulate.png', true) }}" alt=""
+                                            <img src="{{ asset('images/icons/formulate.png', ! config('app.debug')) }}" alt=""
                                                  class="img-fluid">
                                         </div>
                                         <div class="col">
@@ -278,7 +278,7 @@ $packagings = NuudoPackaging::get();
                     <div class="showcase mb-5">
                         <div class="showcase__header mb-3">
                             <div class="showcase__brand mb-2">
-                                <img src="{{ asset('images/nuudo/logo-nuudo.png', true) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('images/nuudo/logo-nuudo.png', ! config('app.debug')) }}" alt="" class="img-fluid"
                                      style="max-height: 55px">
                             </div>
                             <h3 class="showcase__subtitle fw-bold font:gotham-rounded fs-3">
@@ -286,7 +286,7 @@ $packagings = NuudoPackaging::get();
                             </h3>
                         </div>
                         <div class="showcase__body">
-                            <img src="{{ asset('images/nuudo/Nuudo-7.jpeg', true) }}" alt="" class="img-fluid w-100">
+                            <img src="{{ asset('images/nuudo/Nuudo-7.jpeg', ! config('app.debug')) }}" alt="" class="img-fluid w-100">
                         </div>
                         <div class="showcase__footer mt-3">
                             <div class="font:gotham-rounded fs-5 mb-3">
@@ -389,7 +389,7 @@ $packagings = NuudoPackaging::get();
         </div>
         <img
             src="{{ Croppa::url('images/nuudo/jonathan-borba-RWgE9_lKj_Y-unsplash.jpeg', width: 100, options: ['filters' => 'blur', 'quality' => 50]) }}"
-            data-src="{{ asset('images/nuudo/jonathan-borba-RWgE9_lKj_Y-unsplash.jpeg', true) }}" alt="banner hero"
+            data-src="{{ asset('images/nuudo/jonathan-borba-RWgE9_lKj_Y-unsplash.jpeg', ! config('app.debug')) }}" alt="banner hero"
             class="img-fluid w-100 lozad">
         <div class="container mt-5">
             <div class="text-center">

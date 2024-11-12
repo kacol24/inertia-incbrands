@@ -109,7 +109,7 @@ $features = [
                     style="color: var(--brand-color)">MAKE PARENTS' LIFE EASIER</span>
             </div>
             <div class="mt-3 mb-5 text-center">
-                <img src="{{ asset('images/illustration-1.png', true) }}" alt="" class="img-fluid">
+                <img src="{{ asset('images/illustration-1.png', !config('app.debug')) }}" alt="" class="img-fluid">
             </div>
             <hr style="color: #4c4c4c">
         </div>
@@ -183,7 +183,7 @@ $features = [
                 <div class="col-md-3" data-aos="fade-right">
                     <h4 class="rounded-pill fw-bold mb-0 px-3 py-3 text-white text-uppercase font:gotham-rounded lh-1 d-inline-block position-relative"
                         style="background-color:#4f4e4e;font-size: 24px;">
-                        <img src="{{ asset('images/icons/Icon-1.png', true) }}" alt=""
+                        <img src="{{ asset('images/icons/Icon-1.png', !config('app.debug')) }}" alt=""
                              class="img-fluid position-absolute top-0 start-0"
                              style="width: 56px;">
                         <span class="ms-5">
@@ -198,7 +198,7 @@ $features = [
                 <div class="col-md-4 mt-5 mt-md-0" data-aos="fade-down">
                     <h4 class="rounded-pill fw-bold mb-0 px-3 py-3 text-white text-uppercase font:gotham-rounded lh-1 d-inline-block position-relative"
                         style="background-color:#4f4e4e;font-size: 24px;">
-                        <img src="{{ asset('images/icons/Icon-2.png', true) }}" alt=""
+                        <img src="{{ asset('images/icons/Icon-2.png', !config('app.debug')) }}" alt=""
                              class="img-fluid position-absolute top-0 start-0"
                              style="width: 56px;">
                         <span class="ms-5">Smart</span>
@@ -213,7 +213,7 @@ $features = [
                 <div class="col-md-3 mt-5 mt-md-0" data-aos="fade-left">
                     <h4 class="rounded-pill fw-bold mb-0 px-3 py-3 text-white text-uppercase font:gotham-rounded lh-1 d-inline-block position-relative"
                         style="background-color:#4f4e4e;font-size: 24px;">
-                        <img src="{{ asset('images/icons/Icon-3.png', true) }}" alt=""
+                        <img src="{{ asset('images/icons/Icon-3.png', !config('app.debug')) }}" alt=""
                              class="img-fluid position-absolute top-0 start-0"
                              style="width: 56px;">
                         <span class="ms-5">Simple</span>
@@ -280,12 +280,12 @@ $features = [
         <div class="container">
             <div class="position-relative">
                 <div class="position-relative">
-                    <img src="{{ asset('images/Photo-13.jpeg', true) }}" alt="" class="img-fluid w-100">
+                    <img src="{{ asset('images/Photo-13.jpeg', !config('app.debug')) }}" alt="" class="img-fluid w-100">
                     <div class="position-absolute bottom-0 start-0 w-100">
-                        <img src="{{ asset('images/Object-01.png', true) }}" alt="" class="img-fluid w-100">
+                        <img src="{{ asset('images/Object-01.png', !config('app.debug')) }}" alt="" class="img-fluid w-100">
                     </div>
                     <div class="position-absolute bottom-0 start-0 w-100 text-center pb-3 pb-md-4">
-                        <img src="{{ asset('images/babygo-2.png', true) }}" alt="" class="img-fluid" style="max-width: 250px">
+                        <img src="{{ asset('images/babygo-2.png', !config('app.debug')) }}" alt="" class="img-fluid" style="max-width: 250px">
                     </div>
                 </div>
                 <div class="position-md-absolute start-0 top-0 w-100 p-md-5 p-3">
