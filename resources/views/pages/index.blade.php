@@ -253,7 +253,7 @@ $banners = Slider::get();
                         CONTACT US
                     </h3>
                     <div>
-                        <a href="https://wa.me/6289676717676" class="text-decoration-none font:gotham-rounded fw-bold"
+                        <a href="https://wa.me/628996895888" class="text-decoration-none font:gotham-rounded fw-bold"
                            style="--bs-link-color-rgb: #8d97ad" target="_blank">
                             <div class="d-flex align-items-center">
                                 <svg style="width: 1.25em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
